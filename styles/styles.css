@@ -119,7 +119,7 @@ body {
 }
 .main {
   flex-grow: 1;
-  width: 1203px;
+  width: 1200px;
 }
 
 .hero {
@@ -130,6 +130,8 @@ body {
   background-size: 100% auto 100% auto;
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center;
+  width: 1200px;
+  height: 485px;
 }
 .hero-logo {
   padding: 51px 371px 82px;
@@ -161,12 +163,15 @@ body {
   color: #000000;
 }
 .advantages-item {
+  width: 230px;
+  height: 181px;
   display: flex;
   flex-direction: column;
   padding: 92px 85px 111px;
 }
 
 .advantages-item-blue {
+  width: 400px;
   display: flex;
   flex-direction: column;
   background-color: #82b3d3;
@@ -222,6 +227,7 @@ body {
   background-repeat: no-repeat;
 }
 .advantages-subitem {
+  width: 230px;
   padding: 185px 85px 81px;
   display: flex;
   flex-direction: column;
