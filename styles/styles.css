@@ -63,21 +63,28 @@ body {
 }
 .navigation {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   flex-wrap: wrap;
 }
 .navigation-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 410px;
 }
 .navigation-item {
-  width: 400px;
+  padding: 20px 16px;
 }
-
+.navigation-link {
+  display: block;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
 .navigation-user {
   width: 350px;
   margin-left: auto;
@@ -86,25 +93,18 @@ body {
   background-image: url(../images/search.svg);
   min-width: 20px;
   min-height: 20px;
-  padding: 22px 12px;
+  display: inline-block;
   background-repeat: no-repeat;
 }
 .navigation-favourites {
   background-image: url(../images/favourites.svg);
   min-width: 20px;
   min-height: 20px;
-  padding: 22px 12px;
+  display: inline-block;
   background-repeat: no-repeat;
 }
-
-.navigation-link {
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-  text-decoration: none;
-  color: #000000;
-}
 .button {
+  font-family: "PT Sans", "Arial", sans-serif;
   color: #ffffff;
   background-color: #756157;
   text-transform: uppercase;
@@ -115,7 +115,6 @@ body {
   font-weight: 700;
   line-height: 20px;
   text-align: center;
-  /* padding: 8px 34px; */
 }
 .main {
   flex-grow: 1;
@@ -252,7 +251,6 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-align: center;
-  margin: 0;
   padding: 20px;
 }
 .search-subtitle {
@@ -260,7 +258,6 @@ body {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-  margin: 0;
   padding: 0 0 54px;
 }
 .button-search {
@@ -275,28 +272,25 @@ body {
 .newsletter {
   color: #ffffff;
   background-color: #808080;
-  background-image: url(/images/subscribe.jpg);
+  background-image: url(../images/subscribe.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-  width: 1200px;
-  height: 415px;
+  padding: 96px 258px 104px;
   text-align: center;
 }
 .newsletter-button {
   background-color: #82b3d3;
 }
 .newsletter-title {
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  padding: 96px 398px 0;
 }
 .newsletter-subscribtion {
-  width: 475px;
-  margin: 0 auto;
-  padding: 20px 104px 54px;
+  margin-bottom: 54px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -322,14 +316,14 @@ body {
 }
 .html-academy-logo {
   margin-right: 70px;
-  height: 32px;
-  width: 114px;
+  height: 33px;
+  width: 115px;
 }
 /* CATALOG */
 .filter {
   color: #ffffff;
   background-color: grey;
-  background-image: url(/images/catalog-filter.jpg);
+  background-image: url(../images/catalog-filter.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -365,13 +359,13 @@ body {
 .catalog-products {
   width: 1060px;
   height: 160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .catalog-filter {
-  outline: red 3px solid;
-  margin: 40px 70px 70px;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
 .button-catalog-group {
   display: flex;
@@ -379,13 +373,18 @@ body {
 }
 .header-inner {
   width: 1060px;
-  height: 107px;
-  margin: 35px 70px;
+  margin: 35px auto 0;
 }
 .inner-header-title {
+  margin: 0;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+}
+.breadcrumbs {
+  margin: 0;
+  margin-bottom: 40px;
 }
 .breadcrumbs-link {
   font-weight: 400;
@@ -501,7 +500,6 @@ body {
 
 .newsletter-catalog {
   background: transparent;
-  outline: 5px solid red;
 }
 .newsletter-title-catalog {
   color: #000000;
