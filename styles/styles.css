@@ -116,7 +116,8 @@ body {
   line-height: 20px;
   text-align: center;
 }
-.main {
+.main,
+.main-inner {
   flex-grow: 1;
   width: 1200px;
 }
@@ -167,15 +168,18 @@ body {
   display: flex;
   flex-direction: column;
   padding: 92px 85px 111px;
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-blue {
   width: 400px;
   display: flex;
   flex-direction: column;
-  background-color: #82b3d3;
+  background-color: rgba(130, 179, 211, 1);
 }
-
+.advantages-item-light-blue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
 .advantages-item-blue-container {
   padding: 92px 85px 111px;
 }
@@ -278,9 +282,7 @@ body {
   padding: 96px 258px 104px;
   text-align: center;
 }
-.newsletter-button {
-  background-color: #82b3d3;
-}
+
 .newsletter-title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -297,6 +299,18 @@ body {
 }
 .subscribtion-form {
   margin: 0 auto;
+}
+.field {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.newsletter-button {
+  background-color: #82b3d3;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
 }
 /* FOOTER */
 .page-footer {
@@ -331,46 +345,6 @@ body {
   width: 1200px;
   height: 412px;
 }
-.breadcrumbs {
-  display: flex;
-  flex-direction: row;
-}
-/* КАТАЛОГ */
-.catalog-container {
-  display: flex;
-  flex-direction: row;
-}
-.product-list {
-  gap: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 40px 70px 20px;
-}
-.product-card {
-  box-sizing: border-box;
-  width: 340px;
-  border-radius: 4px;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #e6e6e6;
-}
-.catalog-products {
-  width: 1060px;
-  height: 160px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.catalog-filter {
-  display: flex;
-  justify-content: space-between;
-}
-.button-catalog-group {
-  display: flex;
-  flex-direction: column;
-}
 .header-inner {
   width: 1060px;
   margin: 35px auto 0;
@@ -383,9 +357,12 @@ body {
   line-height: 78px;
 }
 .breadcrumbs {
+  display: flex;
+  flex-direction: row;
   margin: 0;
   margin-bottom: 40px;
 }
+
 .breadcrumbs-link {
   font-weight: 400;
   font-size: 16px;
@@ -393,6 +370,19 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
+
+.catalog-products {
+  width: 1060px;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
@@ -405,12 +395,11 @@ body {
   line-height: 23px;
   color: #ffffff;
 }
-/* .catalog-filter-label input {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  color: #ffffff;
-} */
+
+.button-catalog-group {
+  display: flex;
+  flex-direction: column;
+}
 .button-catalog {
   background-color: #82b3d3;
   font-weight: 700;
@@ -421,18 +410,63 @@ body {
 .button-catalog-reset {
   background: transparent;
 }
+.catalog {
+  margin-top: 50px;
+}
+.catalog-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-right: 70px;
+}
 .found-hotels {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
 }
+
 .select-control {
+  padding: 14px 20px 14px 20px;
+  width: 292px;
+  margin-left: auto;
+  margin-right: 70px;
   color: #000000;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  box-sizing: border-box;
+  appearance: none;
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
+.catalog-view {
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+  background-color: #808080;
+}
+/* КАРТОЧКИ */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 70px 20px;
+}
+
+.product-card {
+  box-sizing: border-box;
+  width: 340px;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  outline: 1px solid #e6e6e6;
+}
+
 .product-card-more-info {
   color: #ffffff;
   background-color: #756157;
@@ -446,8 +480,9 @@ body {
   background-color: #7db54f;
 }
 .product-card-rating {
-  width: 140px;
-  height: 37px;
+  border-radius: 4px;
+  padding: 9px 22px;
+  text-transform: uppercase;
   color: #333333;
   background-color: #f2f2f2;
 }
@@ -464,6 +499,7 @@ body {
 }
 
 .pagination-item {
+  text-align: center;
   width: 60px;
   height: 60px;
   color: #000000;
@@ -481,8 +517,6 @@ body {
   border-radius: 4px;
 }
 .pagination-current {
-  width: 60px;
-  height: 60px;
   color: #000000;
   background-color: #f2f2f2;
   border-radius: 4px;
