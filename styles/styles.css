@@ -725,7 +725,7 @@ body {
 }
 
 .catalog-filter-label-price {
-  font-family: "PT Sans";
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -762,7 +762,7 @@ input::-webkit-inner-spin-button {
   content: "от";
   right: 20px;
   top: 12px;
-  font-family: PT Sans;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -1167,6 +1167,7 @@ input::-webkit-inner-spin-button {
 }
 /* МОДАЛЬНОЕ ОКНО */
 .modal-container {
+  overflow-y: scroll;
   z-index: 2;
   position: fixed;
   top: 0;
@@ -1423,6 +1424,6 @@ input::-webkit-inner-spin-button {
   text-transform: uppercase;
   cursor: pointer;
 }
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
