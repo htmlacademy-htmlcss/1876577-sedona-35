@@ -251,12 +251,11 @@ body {
 
 .subtitle {
   margin: 25px 274px 90px;
-
   text-align: center;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
-  color: #000000;
+  color: #333333;
 }
 
 /* advantages  */
@@ -355,7 +354,7 @@ body {
   width: 230px;
   text-align: center;
   margin: 0;
-  color: #000000;
+  color: #333333;
 }
 
 .advantages-description-blue {
@@ -415,6 +414,7 @@ body {
 }
 
 .search-title {
+  color: #000000;
   margin: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -425,6 +425,7 @@ body {
 }
 
 .search-subtitle {
+  color: #333333;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
@@ -434,6 +435,7 @@ body {
 }
 
 .button-search {
+  color: #ffffff;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -526,7 +528,10 @@ body {
   opacity: 0.5;
   outline: none;
 }
-
+.field::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
 .newsletter-button {
   background-color: #82b3d3;
   font-size: 20px;
@@ -608,7 +613,6 @@ body {
 .footer-phone {
   max-width: 350px;
   max-height: 50px;
-  overflow: hidden;
 }
 
 .footer-contacts-phone {
@@ -781,19 +785,19 @@ body {
   color: #ffffff;
 }
 
-.control:focus-within {
-  outline: 3px solid #83b3d3;
+.control-input[type="checkbox"]:focus-within + .control-mark {
+  outline: 3px solid #82b3d3;
 }
 
 .control-label {
   padding-left: 36px;
 }
 
-.control-label:hover {
+.control:hover {
   opacity: 0.6;
 }
 
-.control-label:active {
+.control:active {
   opacity: 0.3;
 }
 
@@ -824,6 +828,10 @@ body {
 
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
+}
+
+.control-input[type="radio"]:focus-within + .control-mark {
+  outline: 3px solid #82b3d3;
 }
 
 .control-input[type="radio"]:checked + .control-mark {
@@ -1032,7 +1040,7 @@ input[type="number"] {
   width: 292px;
   margin-left: auto;
   margin-right: 70px;
-  color: #000000;
+  color: #333333;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -1084,17 +1092,17 @@ input[type="number"] {
 }
 
 .button-catalog:hover {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
   border-radius: 4px;
 }
 
 .button-catalog:active {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
   border-radius: 4px;
 }
 
 .button-catalog:focus {
-  border: 2px solid #68a2ca;
+  outline: 2px solid #68a2ca;
 }
 
 .catalog-view:nth-child(2),
@@ -1156,13 +1164,13 @@ input[type="number"] {
 }
 
 .product-type {
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
   text-align: left;
   margin: 0;
 }
 
 .product-card-price {
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
   text-align: right;
 }
 
@@ -1248,7 +1256,7 @@ input[type="number"] {
 }
 
 .product-card-rating {
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -1292,6 +1300,10 @@ input[type="number"] {
   border-radius: 4px;
 }
 
+.pagination-item:focus-within {
+  border: none;
+  outline: 1px solid #82b3d3;
+}
 .pagination-link {
   cursor: pointer;
   display: flex;
@@ -1310,10 +1322,12 @@ input[type="number"] {
 
 .pagination-link:not(.pagination-current):not(.pagination-space):hover {
   background: #68a2ca;
+  outline: 1px solid #82b3d3;
 }
 
 .pagination-link:not(.pagination-current):not(.pagination-space):focus {
   background: #68a2ca;
+  outline: 1px solid #82b3d3;
 }
 
 .pagination-link:not(.pagination-current):not(.pagination-space):active {
@@ -1351,7 +1365,7 @@ input[type="number"] {
 }
 
 .newsletter-subscribtion-catalog {
-  color: #000000;
+  color: #333333;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
